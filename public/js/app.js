@@ -1,5 +1,7 @@
 var name_field = document.querySelector("#name_field");
+var nes_field = document.querySelector(".nes-field");
 var message_list = document.querySelector(".message-list");
+var intro = document.querySelector(".intro");
 var person;
 
 name_field.addEventListener("keyup", function (event) {
@@ -13,5 +15,7 @@ name_field.addEventListener("keyup", function (event) {
 });
 
 function displayDialog() {
+    nes_field.classList.add("d-none");
     message_list.classList.remove("d-none");
+    intro.innerHTML = "Hello " + person + "!";
 }
