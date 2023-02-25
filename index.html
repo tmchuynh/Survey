@@ -17,12 +17,9 @@
 <body>
     <section class="container pt-5">
         <h2 class="mb-3">Hello</h2>
-        <div class="nes-field">
-            <label for="name_field">What's your name?</label>
-            <input type="text" id="name_field" class="nes-input my-3">
-          </div>
-        <section class="message-list d-block d-none">
-            <section class="message -left d-flex">
+
+        <section class="message-list d-block ">
+            <section class="message message_intro -left d-flex d-none">
                 <i class="nes-octocat animate mx-3"></i>
                 <!-- Balloon -->
                 <div class="nes-balloon from-left intro">
@@ -30,14 +27,26 @@
                 </div>
             </section>
 
-            <section class="message -right d-flex">
+            <section class="message message_body d-none -right d-flex">
                 <!-- Balloon -->
-                <div class="nes-balloon from-right">
+                <div class="nes-balloon from-right body">
                     <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
                 </div>
                 <i class="nes-charmander mx-3"></i>
             </section>
         </section>
+    </section>
+
+    <section class="container inputs">
+        <div class="nes-field">
+            <label for="name_field">What's your name?</label>
+            <input type="text" id="name_field" class="nes-input my-3">
+        </div>
+        <div class="text_field d-none">
+            <label for="textarea_field">Type here:</label>
+            <textarea id="textarea_field" class="nes-textarea"></textarea>
+        </div>
+
     </section>
 
 

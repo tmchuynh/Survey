@@ -8,3 +8,7 @@ cody,
 kdb,
 samp {
   font-family: var(--font-family); }
+
+.inputs {
+  position: absolute;
+  bottom: 0; }
