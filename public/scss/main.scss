@@ -1,0 +1,13 @@
+:root {
+    --font-family: 'Press Start 2P', cursive;
+
+}
+
+html,
+body,
+pre,
+cody,
+kdb,
+samp {
+    font-family: var(--font-family);
+}
