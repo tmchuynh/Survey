@@ -27,16 +27,21 @@ function displayDialog() {
     character_choice.classList.remove("d-none");
     buttons.forEach(element => {
         element.addEventListener("click", function (event) {
-            console.log(element.innerHTML);
+            console.log(element.innerHTML.toLowerCase());
             text_field.classList.remove("d-none");
-    button_group.classList.add("d-none");
+            button_group.classList.add("d-none");
+            displayBody(element.innerHTML.toLowerCase());
 
         });
     });
-
 }
 
-function displayBody() {
+function displayBody(char) {
+    var i = document.createElement("i");
+    i.classList.add("mx-3");
+    i.classList.add("nes-" + char);
+    message_body.appendChild(i);
+
     textarea_field.addEventListener("keyup", function (event) {
         if (event.keyCode === 13) {
             body.innerHTML = textarea_field.value;

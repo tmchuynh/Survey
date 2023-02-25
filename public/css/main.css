@@ -1,5 +1,5 @@
 :root {
-  --font-family: 'Press Start 2P', cursive; }
+  --font-family: "Press Start 2P", cursive; }
 
 html,
 body,
@@ -12,3 +12,12 @@ samp {
 .inputs {
   position: absolute;
   bottom: 0; }
+
+.message-list .-left {
+  justify-content: start; }
+
+.message-list .-right {
+  justify-content: end; }
+  .message-list .-right .nes-ash,
+  .message-list .-right .nes-pokeball {
+    transform: rotateY(180deg); }
