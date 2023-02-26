@@ -9,6 +9,9 @@ var intro = document.querySelector(".intro");
 var text_field = document.querySelector(".text_field");
 var textarea_field = document.querySelector("#textarea_field");
 var body = document.querySelector(".body");
+var selections = document.querySelector(".selections");
+var nes_select = document.querySelector(".nes-select");
+var default_select = document.querySelector("#default_select");
 var person;
 
 name_field.addEventListener("keyup", function (event) {
@@ -47,6 +50,22 @@ function displayBody(char) {
             body.innerHTML = textarea_field.value;
             text_field.classList.add("d-none");
             message_body.classList.remove("d-none");
+    getSelections();
+
         }
+
     });
+
+}
+
+function getSelections() {
+    selections.classList.remove("d-none");
+    nes_select.addEventListener("change", function (event) {
+            for (var i = 0; i < default_select.children.length; i++) {
+        if (default_select.children[i].selected) {
+            console.log(default_select.children[i].innerHTML);
+        }
+    }
+    });
+
 }

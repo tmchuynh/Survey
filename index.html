@@ -41,7 +41,7 @@
             <label for="name_field">What's your name?</label>
             <input type="text" id="name_field" class="nes-input my-3">
         </div>
-        <div class="button-group flex-wrap character_choice d-none">
+        <div class="button-group flex-wrap character_choice my-3 d-none">
             <h6>Which are you?</h6>
             <button type="button" class="nes-btn">Ash</button>
             <button type="button" class="nes-btn is-primary">Squirtle</button>
@@ -51,9 +51,20 @@
             <button type="button" class="nes-btn">Pokeball</button>
         </div>
         <div class="text_field d-none">
-            <label for="textarea_field">Type here:</label>
+            <label for="textarea_field">Type a response:</label>
             <textarea id="textarea_field" class="nes-textarea"></textarea>
         </div>
+        <div class="selections d-none my-3">
+            <label for="default_select">Default select</label>
+            <div class="nes-select">
+                <select required id="default_select">
+                    <option value="" disabled selected hidden>Select...</option>
+                    <option value="0">To be</option>
+                    <option value="1">Not to be</option>
+                </select>
+            </div>
+        </div>
+
 
     </section>
 
