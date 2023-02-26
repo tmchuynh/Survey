@@ -8,6 +8,7 @@ var button_group = document.querySelector(".button-group");
 var intro = document.querySelector(".intro");
 var text_field = document.querySelector(".text_field");
 var textarea_field = document.querySelector("#textarea_field");
+var message_list = document.querySelector(".message-list");
 var body = document.querySelector(".body");
 var selections = document.querySelector(".selections");
 var nes_select = document.querySelector(".nes-select");
@@ -50,7 +51,7 @@ function displayBody(char) {
             body.innerHTML = textarea_field.value;
             text_field.classList.add("d-none");
             message_body.classList.remove("d-none");
-    getSelections();
+            getSelections();
 
         }
 
@@ -61,11 +62,40 @@ function displayBody(char) {
 function getSelections() {
     selections.classList.remove("d-none");
     nes_select.addEventListener("change", function (event) {
-            for (var i = 0; i < default_select.children.length; i++) {
-        if (default_select.children[i].selected) {
-            console.log(default_select.children[i].innerHTML);
+        for (var i = 0; i < default_select.children.length; i++) {
+            if (default_select.children[i].selected) {
+                console.log(default_select.children[i].value);
+                if (default_select.children[i].value == 0) {
+
+                } else if (default_select.children[i].value == 1) {
+                    
+                }
+            }
         }
-    }
     });
 
+}
+
+function createBubble(text) {
+    var section = document.createElement("section");
+    section.classList.add("mesage");
+    section.classList.add("-left");
+    section.classList.add("d-flex");
+
+    var i = document.createElement("i");
+    i.classList.add("mx-3");
+    i.classList.add("animate");
+    i.classList.add("nes-octocat");
+    section.appendChild(i);
+
+    var div = document.createElement("div");
+    div.classList.add("nes-balloon");
+    div.classList.add("from-left");
+    section.appendChild(div);
+
+    var p = document.createElement("p");
+    p.innerHTML = text;
+    div.appendChild(p);
+
+    message_list.appendChild(section);
 }
