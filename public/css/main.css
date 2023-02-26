@@ -10,8 +10,13 @@ samp {
   font-family: var(--font-family); }
 
 .inputs {
-  position: absolute;
-  bottom: 0; }
+  position: sticky;
+  bottom: 0;
+  padding: 1rem;
+  background-color: white; }
+
+.message-list .nes-balloon {
+  word-wrap: normal; }
 
 .message-list .-left {
   justify-content: start; }

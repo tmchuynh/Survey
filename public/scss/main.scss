@@ -12,11 +12,19 @@ samp {
 }
 
 .inputs {
-    position: absolute;
+    position: sticky;
     bottom: 0;
+    padding: 1rem;
+    background-color: white;
 }
 
 .message-list {
+    .message {
+        display: block;
+    }
+    .nes-balloon {
+        word-wrap: normal;
+    }
     .-left {
         justify-content: start;
     }

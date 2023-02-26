@@ -61,14 +61,20 @@ function displayBody(char) {
 
 function getSelections() {
     selections.classList.remove("d-none");
-    nes_select.addEventListener("change", function (event) {
+    nes_select.addEventListener("click", function (event) {
         for (var i = 0; i < default_select.children.length; i++) {
             if (default_select.children[i].selected) {
                 console.log(default_select.children[i].value);
                 if (default_select.children[i].value == 0) {
-
+                    $.getJSON("https://api.adviceslip.com/advice", function (data) {
+                        var text = data.slip.advice;
+                        createBubble(text);
+                });
                 } else if (default_select.children[i].value == 1) {
-                    
+                    $.getJSON("https://passwordinator.onrender.com/", function (data) {
+                        var text = data.data;
+                        createBubble(text);
+                });
                 }
             }
         }
